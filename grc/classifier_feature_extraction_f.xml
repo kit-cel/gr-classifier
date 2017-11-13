@@ -1,0 +1,41 @@
+<block>
+  <name>Feature extraction f</name>
+  <key>classifier_feature_extraction_f</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.feature_extraction_f($sample_rate, $nframes, $frame_len, $stepsize)</make>
+  <param>
+    <name>Sample_rate</name>
+    <key>sample_rate</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Nframes</name>
+    <key>nframes</key>
+    <value>100</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Frame_len</name>
+    <key>frame_len</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Stepsize</name>
+    <key>stepsize</key>
+    <value>100</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>int</type>
+    <nports>2</nports>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <nports>6</nports>
+  </source>
+</block>

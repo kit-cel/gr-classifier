@@ -1,0 +1,20 @@
+<block>
+  <name>Burst Tagger</name>
+  <key>classifier_burst_tagger_cc</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.burst_tagger_cc($burst_len)</make>
+  <param>
+    <name>Burst length (samples)</name>
+    <key>burst_len</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

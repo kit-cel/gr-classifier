@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<block>
+  <name>packet_source</name>
+  <key>classifier_packet_source</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.packet_source($send_state, $tag_key,$address,$port,$pkt_len,$isTransmitter)</make>
+  <callback>set_state($state)</callback>
+  <callback>get_state()</callback>
+  <param>
+    <name>Send state</name>
+    <key>send_state</key>
+    <value>3</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Tag key</name>
+    <key>tag_key</key>
+    <value>"packet_len"</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Address</name>
+    <key>address</key>
+    <value>"127.0.0.1"</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Port</name>
+    <key>port</key>
+    <value>5002</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>pkt_len</name>
+    <key>pkt_len</key>
+    <value>64</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>isTransmitter</name>
+    <key>isTransmitter</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>scenario</name>
+    <type>message</type>
+  </sink>  
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+  <source>
+    <name>enable_tx</name>
+    <type>message</type>
+  </source>
+</block>

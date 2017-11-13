@@ -1,0 +1,37 @@
+<block>
+  <name>Frame detection f</name>
+  <key>classifier_frame_detection_f</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.frame_detection_f($su_frame_len, $tolerance, $lookahead)</make>
+  <param>
+    <name>Su_frame_len</name>
+    <key>su_frame_len</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Tolerance</name>
+    <key>tolerance</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Lookahead</name>
+    <key>lookahead</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <nports>4</nports>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>int</type>
+    <nports>2</nports>
+  </source>
+  <source>
+    <name>pu_frame_start</name>
+    <type>message</type>
+    <optional>True</optional>
+  </source>
+</block>

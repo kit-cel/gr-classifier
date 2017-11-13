@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<block>
+  <name>packet_sink</name>
+  <key>classifier_packet_sink</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.packet_sink($tag_key,$address,$port,$pkt_len,$isTransmitter)</make>
+  <callback>set_state($state)</callback>
+  <param>
+    <name>State</name>
+    <key>state</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Tag key</name>
+    <key>tag_key</key>
+    <value>"packet_len"</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Address</name>
+    <key>address</key>
+    <value>"127.0.0.1"</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Port</name>
+    <key>port</key>
+    <value>5002</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>pkt_len</name>
+    <key>pkt_len</key>
+    <value>1500</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>isTransmitter</name>
+    <key>isTransmitter</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+</block>

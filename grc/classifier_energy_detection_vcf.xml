@@ -1,0 +1,28 @@
+<block>
+  <name>Energy detection vcf</name>
+  <key>classifier_energy_detection_vcf</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.energy_detection_vcf($nfft, $threshold_delta_db)</make>
+  <callback>set_threshold_delta_db($threshold_delta_db)</callback>
+  <param>
+    <name>Nfft</name>
+    <key>nfft</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Threshold_delta_db</name>
+    <key>threshold_delta_db</key>
+    <type>float</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>$nfft</vlen>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <nports>8</nports>
+  </source>
+</block>

@@ -1,0 +1,80 @@
+<block>
+  <name>Cognitive allocator</name>
+  <key>classifier_cognitive_allocator</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.cognitive_allocator($su_frame_len, $pu_frame_len, $detection_rate, $baseband_rate, $nsamp_zeropadding, $delay_ms, $enable_tx, $wait_time_unexpected_frame_ms)</make>
+  <callback>set_enable_tx($enable_tx)</callback>
+  <callback>set_always_send($always_send)</callback>
+	<callback>set_aggro_mode($aggro_mode)</callback>
+  <param>
+    <name>Su_frame_len</name>
+    <key>su_frame_len</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Pu_frame_len</name>
+    <key>pu_frame_len</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Detection_rate</name>
+    <key>detection_rate</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Baseband_rate</name>
+    <key>baseband_rate</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>nsamp zeropadding</name>
+    <key>nsamp_zeropadding</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>delay ms</name>
+    <key>delay_ms</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>enable tx</name>
+    <key>enable_tx</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>always send</name>
+    <key>always_send</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>wait time unexpected frame ms</name>
+    <key>wait_time_unexpected_frame_ms</key>
+    <type>int</type>
+  </param>
+	<param>
+		<name>aggro mode</name>
+		<key>aggro_mode</key>
+		<type>bool</type>
+	</param>
+  <sink>
+    <name>scenario</name>
+    <type>message</type>
+  </sink>
+  <sink>
+    <name>pu_frame_start</name>
+    <type>message</type>
+  </sink>
+    <sink>
+    <name>enable_tx</name>
+    <type>message</type>
+  </sink>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
