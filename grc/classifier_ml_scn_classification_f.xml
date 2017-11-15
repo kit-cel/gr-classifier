@@ -4,7 +4,7 @@
   <key>classifier_ml_scn_classification_f</key>
   <category>CLASSIFIER</category>
   <import>import classifier</import>
-  <make>classifier.ml_scn_classification_f($modelfile, $scalerfile)</make>
+  <make>classifier.ml_scn_classification_f($modelfile, $scaled, $scalerfile)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -18,10 +18,28 @@
   </param>
 
   <param>
+    <name>Scaled</name>
+    <key>scaled</key>
+    <value>False</value>
+    <type>bool</type>
+    <hide>part</hide>
+     <option>
+         <name>True</name>
+         <key>True</key>
+     </option>
+     <option>
+         <name>False</name>
+         <key>False</key>
+     </option>
+  </param>
+
+  <param>
   	<name>Scaler file</name>
   	<key>scalerfile</key>
   	<value></value>
   	<type>file_open</type>
+    <hide> #if $scaled() then 'none' else 'all'#</hide>
+
   </param>
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
@@ -42,5 +60,13 @@
   <source>
     <name>scenario</name>
     <type>message</type>
+    <optional>True</optional>
   </source>
+
+  <source>
+    <name>prob</name>
+    <type>float</type>
+    <vlen>10</vlen>
+  </source>
+
 </block>

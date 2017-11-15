@@ -28,19 +28,26 @@ class ml_scn_classification_f(gr.sync_block):
     """
     docstring for block ml_scn_classification_f
     """
-    def __init__(self, modelfile, scalerfile):
+    def __init__(self, modelfile, scaled, scalerfile):
         gr.sync_block.__init__(self,
-            name="ml scn classification",
-            in_sig=[np.float32]*6,
-            out_sig=None
-            )
-	self.scenario = 10
-	self.message_port_register_out(pmt.intern("scenario"))
-	self.modelfile = modelfile
-	self.model = joblib.load(modelfile)
-	self.scaler = joblib.load(scalerfile)
+                               name="ml scn classification",
+                               in_sig=[np.float32]*6,
+                               out_sig=[(np.float32, 10)]
+                              )
+        self.scenario = 10 # Irreal scenario number just as initialization value
+        self.message_port_register_out(pmt.intern("scenario"))
+        self.predict_proba = [[]]
+        self.scaled = scaled
+        self.model = joblib.load(modelfile)
+        if scaled:
+            self.scaler = joblib.load(scalerfile)
+        else:
+            self.scaler = None
 
     def post_message(self):
+        """
+        Defines the pmt_dict to be posted at the message output port
+        """
         msg_dict = pmt.make_dict()
         msg_dict = pmt.dict_add(msg_dict, pmt.intern("scenario_number"), pmt.from_long(long(self.scenario)))
         self.message_port_pub(pmt.intern("scenario"), msg_dict)
@@ -54,12 +61,15 @@ class ml_scn_classification_f(gr.sync_block):
         """
         # Increase of dimension for the sample is important
         # see https://stackoverflow.com/questions/35082140/preprocessing-in-scikit-learn-single-sample-depreciation-warning
+        out = output_items[0]
         sample = np.array([[input_items[i][0] for i in range(6)]])
-        sample_scaled = self.scaler.transform(sample)
-        detected_scenario = self.model.predict(sample_scaled)
-        #if detected_scenario != self.scenario:
-        #	self.scenario = detected_scenario
-        #	self.post_message()
+
+        if self.scaled:
+            sample = self.scaler.transform(sample)
+        detected_scenario = self.model.predict(sample)
+        predict_proba = self.model.predict_proba(sample)
         self.scenario = detected_scenario
+        predict_proba = [i for lis in predict_proba for i in lis]
+        out[:] = predict_proba
         self.post_message()
-        return 1
+        return len(output_items[0])
