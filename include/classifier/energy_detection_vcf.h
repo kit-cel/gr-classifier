@@ -46,10 +46,14 @@ namespace gr {
        * class. classifier::energy_detection_vcf::make is the public interface for
        * creating new instances.
        */
-      static sptr make(int nfft, float threshold_delta_db);
+      static sptr make(int nfft, int buff_size, float threshold_delta_db);
       virtual void set_threshold_delta_db(float threshold_delta_db) = 0;
       virtual float get_threshold_db() = 0;
       virtual float get_noisefloor_db() = 0;
+      virtual float get_SNR_1() = 0;
+      virtual float get_SNR_2() = 0;
+      virtual float get_SNR_3() = 0;
+      virtual float get_SNR_4() = 0;
     };
 
   } // namespace classifier

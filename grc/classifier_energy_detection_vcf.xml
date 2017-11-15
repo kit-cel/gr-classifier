@@ -3,11 +3,16 @@
   <key>classifier_energy_detection_vcf</key>
   <category>[CLASSIFIER]</category>
   <import>import classifier</import>
-  <make>classifier.energy_detection_vcf($nfft, $threshold_delta_db)</make>
+  <make>classifier.energy_detection_vcf($nfft, $buff_size, $threshold_delta_db)</make>
   <callback>set_threshold_delta_db($threshold_delta_db)</callback>
   <param>
     <name>Nfft</name>
     <key>nfft</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Buff Size</name>
+    <key>buff_size</key>
     <type>int</type>
   </param>
   <param>

@@ -21,7 +21,9 @@
 #ifndef INCLUDED_CLASSIFIER_ENERGY_DETECTION_VCF_IMPL_H
 #define INCLUDED_CLASSIFIER_ENERGY_DETECTION_VCF_IMPL_H
 
+#include <vector>
 #include <classifier/energy_detection_vcf.h>
+#include <boost/circular_buffer.hpp>
 
 namespace gr {
   namespace classifier {
@@ -36,6 +38,11 @@ namespace gr {
       int d_nbins_subchan; // number of bins per subchannel
       std::vector<float> d_magsquared; // buffer for storing the magnitude squared input values
       std::vector<float> d_mean_power; // buffer for storing the mean power values per subchannel
+      std::vector<float> d_max_mean_power; // buffer for storing the max mean power values per subchannel
+      std::vector<boost::circular_buffer<float> > d_SNR_buffer;
+      std::vector< boost::circular_buffer<float>::iterator > max_SNR;
+      int d_buff_size; // Amount of FFT realizations in which the maximum SNR is to be held
+      std::vector<float> d_SNR; // buffer for storing the max SNR per subchannel
       float d_noisefloor; // noisefloor (linear)
       float d_noisefloor_db; // noisefloor (dB)
       float d_avg_alpha; // single-pole IIR coefficient for averaging the noise floor
@@ -43,12 +50,16 @@ namespace gr {
       void update_noisefloor();
       
      public:
-      energy_detection_vcf_impl(int nfft, float threshold_delta_db);
+      energy_detection_vcf_impl(int nfft, int buff_size, float threshold_delta_db);
       ~energy_detection_vcf_impl();
       
       virtual void set_threshold_delta_db(float threshold_delta_db){ d_threshold_delta_db = threshold_delta_db; }
       virtual float get_threshold_db(){ return d_threshold_db; }
       virtual float get_noisefloor_db(){ return d_noisefloor_db; }
+      virtual float get_SNR_1(){ return d_SNR[0]; }
+      virtual float get_SNR_2(){ return d_SNR[1]; }
+      virtual float get_SNR_3(){ return d_SNR[2]; }
+      virtual float get_SNR_4(){ return d_SNR[3]; }
 
       int work(int noutput_items,
          gr_vector_const_void_star &input_items,
