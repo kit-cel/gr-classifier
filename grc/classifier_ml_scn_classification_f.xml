@@ -1,21 +1,28 @@
 <?xml version="1.0"?>
 <block>
-  <name>ml_classification</name>
-  <key>classifier_ml_classification</key>
-  <category>[classifier]</category>
+  <name>ML scenario classification</name>
+  <key>classifier_ml_scn_classification_f</key>
+  <category>CLASSIFIER</category>
   <import>import classifier</import>
-  <make>classifier.ml_classification()</make>
+  <make>classifier.ml_scn_classification_f($modelfile, $scalerfile)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
   <param>
-    <name>...</name>
-    <key>...</key>
-    <type>...</type>
+  	<name>Model file</name>
+  	<key>modelfile</key>
+  	<value></value>
+  	<type>file_open</type>
   </param>
 
+  <param>
+  	<name>Scaler file</name>
+  	<key>scalerfile</key>
+  	<value></value>
+  	<type>file_open</type>
+  </param>
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
        * type
@@ -23,7 +30,8 @@
        * optional (set to 1 for optional inputs) -->
   <sink>
     <name>in</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <type>float</type>
+    <nports>6</nports>
   </sink>
 
   <!-- Make one 'source' node per output. Sub-nodes:
@@ -32,7 +40,7 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <name>out</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
+    <name>scenario</name>
+    <type>message</type>
   </source>
 </block>

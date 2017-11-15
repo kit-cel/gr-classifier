@@ -31,4 +31,5 @@ except ImportError:
 	pass
 
 # import any pure python here
+from ml_scn_classification_f import ml_scn_classification_f
 #

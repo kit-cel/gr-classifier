@@ -31,7 +31,7 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    DESTINATION ${GR_PYTHON_DIR}/classifier
+    ml_scn_classification_f.py DESTINATION ${GR_PYTHON_DIR}/classifier
 )
 
 ########################################################################
@@ -46,3 +46,4 @@ GR_ADD_TEST(qa_feature_extraction_f ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_
 GR_ADD_TEST(qa_cognitive_allocator ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_cognitive_allocator.py)
 GR_ADD_TEST(qa_burst_tagger_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_burst_tagger_cc.py)
 GR_ADD_TEST(qa_energy_detection_vcf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_energy_detection_vcf.py)
+GR_ADD_TEST(qa_ml_scn_classification_f ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ml_scn_classification_f.py)
