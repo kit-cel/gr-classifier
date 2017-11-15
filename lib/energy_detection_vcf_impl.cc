@@ -127,10 +127,12 @@ namespace gr {
         for(int i=0; i<d_nchan; i++)
         {
           //volk_32f_x2_add_32f(&d_mean_power[0]+i, &d_magsquared[0]+d_nbins_subchan/4+i*d_nbins_subchan, &d_magsquared[0]+d_nbins_subchan/2+i*d_nbins_subchan, d_nbins_subchan/4);
-          for(int k=1; k<d_nbins_subchan/2; k++)
+          //for(int k=1; k<d_nbins_subchan/2; k++) // instead of taking half the bins, will increase to 3/4
+          for(int k=1; k<d_nbins_subchan* 3 / 4; k++)
           {
             //std::cout << "i: " << i << "/" << d_nchan << ", k: " << k << "/" << d_nbins_subchan/2 << std::endl;
-            d_mean_power[i] += d_magsquared[i*d_nbins_subchan+d_nbins_subchan/4+k];
+            //d_mean_power[i] += d_magsquared[i*d_nbins_subchan+d_nbins_subchan/4+k]; // divide by four to set the start point at that bin and run along the middle half of the channel
+            d_mean_power[i] += d_magsquared[i*d_nbins_subchan+d_nbins_subchan/8+k]; // divide by eight to set the start point at that bin and run along the middle 3/4 of the channel
           }
           d_mean_power[i] /= d_nbins_subchan/2; // take number of accumulated bins into account
           d_mean_power[i] = 10 * std::log10(d_mean_power[i]);
