@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Scenario Classification Ml
-# Generated: Wed Nov 15 13:31:31 2017
+# Generated: Wed Nov 15 19:44:50 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -21,6 +21,7 @@ from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio import fft
 from gnuradio import gr
+from gnuradio import qtgui
 from gnuradio.eng_option import eng_option
 from gnuradio.fft import window
 from gnuradio.filter import firdes
@@ -28,6 +29,7 @@ from optparse import OptionParser
 import classifier
 import fbmc
 import numpy as np
+import sip
 import sys
 from gnuradio import qtgui
 
@@ -79,24 +81,123 @@ class scenario_classification_ml(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
+        self.qtgui_time_raster_sink_x_0_0_0 = qtgui.time_raster_sink_f(
+        	samp_rate,
+        	100,
+        	10,
+        	([]),
+        	([]),
+        	"SVM",
+        	1,
+        	)
+
+        self.qtgui_time_raster_sink_x_0_0_0.set_update_time(0.10)
+        self.qtgui_time_raster_sink_x_0_0_0.set_intensity_range(-1, 1)
+        self.qtgui_time_raster_sink_x_0_0_0.enable_grid(False)
+        self.qtgui_time_raster_sink_x_0_0_0.enable_axis_labels(True)
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        colors = [5, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(1):
+            if len(labels[i]) == 0:
+                self.qtgui_time_raster_sink_x_0_0_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_time_raster_sink_x_0_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_raster_sink_x_0_0_0.set_color_map(i, colors[i])
+            self.qtgui_time_raster_sink_x_0_0_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_time_raster_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_time_raster_sink_x_0_0_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_raster_sink_x_0_0_0_win)
+        self.qtgui_time_raster_sink_x_0_0 = qtgui.time_raster_sink_f(
+        	samp_rate,
+        	100,
+        	10,
+        	([]),
+        	([]),
+        	"Knearest",
+        	1,
+        	)
+
+        self.qtgui_time_raster_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_time_raster_sink_x_0_0.set_intensity_range(-1, 1)
+        self.qtgui_time_raster_sink_x_0_0.enable_grid(False)
+        self.qtgui_time_raster_sink_x_0_0.enable_axis_labels(True)
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        colors = [5, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(1):
+            if len(labels[i]) == 0:
+                self.qtgui_time_raster_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_time_raster_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_raster_sink_x_0_0.set_color_map(i, colors[i])
+            self.qtgui_time_raster_sink_x_0_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_time_raster_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_raster_sink_x_0_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_raster_sink_x_0_0_win)
+        self.qtgui_time_raster_sink_x_0 = qtgui.time_raster_sink_f(
+        	samp_rate,
+        	100,
+        	10,
+        	([]),
+        	([]),
+        	"Decision Tree",
+        	1,
+        	)
+
+        self.qtgui_time_raster_sink_x_0.set_update_time(0.10)
+        self.qtgui_time_raster_sink_x_0.set_intensity_range(-1, 1)
+        self.qtgui_time_raster_sink_x_0.enable_grid(False)
+        self.qtgui_time_raster_sink_x_0.enable_axis_labels(True)
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        colors = [5, 0, 0, 0, 0,
+                  0, 0, 0, 0, 0]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(1):
+            if len(labels[i]) == 0:
+                self.qtgui_time_raster_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_time_raster_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_time_raster_sink_x_0.set_color_map(i, colors[i])
+            self.qtgui_time_raster_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_time_raster_sink_x_0_win = sip.wrapinstance(self.qtgui_time_raster_sink_x_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_raster_sink_x_0_win)
         self.fft_vxx_0 = fft.fft_vcc(nfft, True, (window.blackmanharris(nfft)), True, 1)
-        self.classifier_ml_scn_classification_f_0 = classifier.ml_scn_classification_f('/home/cuervo/thesis/cognitive_radio_ml/weights/svc_full_data_set_rbf_1e6.pkl', '/home/cuervo/thesis/cognitive_radio_ml/weights/scaler_saved.pkl')
+        self.classifier_ml_scn_classification_f_0_0_0 = classifier.ml_scn_classification_f('/home/cuervo/thesis/cognitive_radio_ml/weights/svc_full_data_set_rbf_1e6.pkl', True, '/home/cuervo/thesis/cognitive_radio_ml/weights/scaler_saved.pkl')
+        self.classifier_ml_scn_classification_f_0_0 = classifier.ml_scn_classification_f('/home/cuervo/thesis/cognitive_radio_ml/weights/knn_full_data_set_4_neighbors.pkl', False, '/home/cuervo/thesis/cognitive_radio_ml/weights/scaler_saved.pkl')
+        self.classifier_ml_scn_classification_f_0 = classifier.ml_scn_classification_f('../weights/dtc_full_data_set_depth_50.pkl', False, '/home/cuervo/thesis/cognitive_radio_ml/weights/scaler_saved.pkl')
         self.classifier_frame_detection_f_0 = classifier.frame_detection_f(su_frame_len/nfft - 9, 5, 5)
         self.classifier_feature_extraction_f_0 = classifier.feature_extraction_f(samp_rate / nfft, 50, pu_frame_len / nfft, 5)
         self.classifier_energy_detection_vcf_0 = classifier.energy_detection_vcf(nfft, threshold_delta)
+        self.blocks_vector_to_stream_0_1 = blocks.vector_to_stream(gr.sizeof_float*1, 10)
+        self.blocks_vector_to_stream_0_0 = blocks.vector_to_stream(gr.sizeof_float*1, 10)
+        self.blocks_vector_to_stream_0 = blocks.vector_to_stream(gr.sizeof_float*1, 10)
         self.blocks_throttle_1 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, nfft)
         self.blocks_null_sink_1 = blocks.null_sink(gr.sizeof_float*1)
-        self.blocks_message_debug_0 = blocks.message_debug()
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/home/cuervo/thesis/data/final_pu/no_dc/scn_8_snr_15.dat', True)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_gr_complex*1, '/home/cuervo/thesis/data/final_pu/no_dc/scn_9_snr_5.dat', True)
 
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.classifier_ml_scn_classification_f_0, 'scenario'), (self.blocks_message_debug_0, 'print'))
         self.connect((self.blocks_file_source_0, 0), (self.blocks_throttle_1, 0))
         self.connect((self.blocks_stream_to_vector_0, 0), (self.fft_vxx_0, 0))
         self.connect((self.blocks_throttle_1, 0), (self.blocks_stream_to_vector_0, 0))
+        self.connect((self.blocks_vector_to_stream_0, 0), (self.qtgui_time_raster_sink_x_0, 0))
+        self.connect((self.blocks_vector_to_stream_0_0, 0), (self.qtgui_time_raster_sink_x_0_0_0, 0))
+        self.connect((self.blocks_vector_to_stream_0_1, 0), (self.qtgui_time_raster_sink_x_0_0, 0))
         self.connect((self.classifier_energy_detection_vcf_0, 0), (self.blocks_null_sink_1, 0))
         self.connect((self.classifier_energy_detection_vcf_0, 1), (self.blocks_null_sink_1, 1))
         self.connect((self.classifier_energy_detection_vcf_0, 2), (self.blocks_null_sink_1, 2))
@@ -111,8 +212,23 @@ class scenario_classification_ml(gr.top_block, Qt.QWidget):
         self.connect((self.classifier_feature_extraction_f_0, 3), (self.classifier_ml_scn_classification_f_0, 3))
         self.connect((self.classifier_feature_extraction_f_0, 4), (self.classifier_ml_scn_classification_f_0, 4))
         self.connect((self.classifier_feature_extraction_f_0, 5), (self.classifier_ml_scn_classification_f_0, 5))
+        self.connect((self.classifier_feature_extraction_f_0, 0), (self.classifier_ml_scn_classification_f_0_0, 0))
+        self.connect((self.classifier_feature_extraction_f_0, 1), (self.classifier_ml_scn_classification_f_0_0, 1))
+        self.connect((self.classifier_feature_extraction_f_0, 2), (self.classifier_ml_scn_classification_f_0_0, 2))
+        self.connect((self.classifier_feature_extraction_f_0, 3), (self.classifier_ml_scn_classification_f_0_0, 3))
+        self.connect((self.classifier_feature_extraction_f_0, 4), (self.classifier_ml_scn_classification_f_0_0, 4))
+        self.connect((self.classifier_feature_extraction_f_0, 5), (self.classifier_ml_scn_classification_f_0_0, 5))
+        self.connect((self.classifier_feature_extraction_f_0, 0), (self.classifier_ml_scn_classification_f_0_0_0, 0))
+        self.connect((self.classifier_feature_extraction_f_0, 1), (self.classifier_ml_scn_classification_f_0_0_0, 1))
+        self.connect((self.classifier_feature_extraction_f_0, 2), (self.classifier_ml_scn_classification_f_0_0_0, 2))
+        self.connect((self.classifier_feature_extraction_f_0, 3), (self.classifier_ml_scn_classification_f_0_0_0, 3))
+        self.connect((self.classifier_feature_extraction_f_0, 4), (self.classifier_ml_scn_classification_f_0_0_0, 4))
+        self.connect((self.classifier_feature_extraction_f_0, 5), (self.classifier_ml_scn_classification_f_0_0_0, 5))
         self.connect((self.classifier_frame_detection_f_0, 0), (self.classifier_feature_extraction_f_0, 0))
         self.connect((self.classifier_frame_detection_f_0, 1), (self.classifier_feature_extraction_f_0, 1))
+        self.connect((self.classifier_ml_scn_classification_f_0, 0), (self.blocks_vector_to_stream_0, 0))
+        self.connect((self.classifier_ml_scn_classification_f_0_0, 0), (self.blocks_vector_to_stream_0_1, 0))
+        self.connect((self.classifier_ml_scn_classification_f_0_0_0, 0), (self.blocks_vector_to_stream_0_0, 0))
         self.connect((self.fft_vxx_0, 0), (self.classifier_energy_detection_vcf_0, 0))
 
     def closeEvent(self, event):
