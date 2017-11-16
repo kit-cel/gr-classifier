@@ -20,10 +20,10 @@ install(FILES
     classifier_frame_detection_f.xml
     classifier_feature_extraction_f.xml
     classifier_cognitive_allocator.xml
-    classifier_ml_scn_classification_f.xml
     classifier_burst_tagger_cc.xml
     classifier_energy_detection_vcf.xml
     classifier_packet_source.xml
     classifier_packet_sink.xml
+    classifier_dl_scn_classification_c.xml
     classifier_ml_scn_classification_f.xml DESTINATION share/gnuradio/grc/blocks
 )
