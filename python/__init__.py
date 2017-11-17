@@ -33,5 +33,7 @@ except ImportError:
 # import any pure python here
 from ml_scn_classification_f import ml_scn_classification_f
 from dl_scn_classification_c import dl_scn_classification_c
+from dl_class import dl_class
+from spectrogram_vc_vf import spectrogram_vc_vf
 
 #

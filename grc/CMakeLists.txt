@@ -25,5 +25,7 @@ install(FILES
     classifier_packet_source.xml
     classifier_packet_sink.xml
     classifier_dl_scn_classification_c.xml
-    classifier_ml_scn_classification_f.xml DESTINATION share/gnuradio/grc/blocks
+    classifier_ml_scn_classification_f.xml
+    classifier_dl_class.xml
+    classifier_spectrogram_vc_vf.xml DESTINATION share/gnuradio/grc/blocks
 )

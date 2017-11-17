@@ -72,6 +72,7 @@ class dl_scn_classification_c(gr.sync_block):
                 stacked = np.vstack([stacked, mean_power])
         # The model requires dimensions (1, 64, 64, 1)
         stacked = np.expand_dims(stacked, axis=2)
+        # print(stacked)
         image = array_to_img(stacked, scale=False)
         return image
 
@@ -81,9 +82,11 @@ class dl_scn_classification_c(gr.sync_block):
         for i in range(len(in0)):
             image = self.spectrogram(in0[i])
             sample = img_to_array(image)
+            print(sample)
             sample = np.expand_dims(sample, axis=0)
             self.count =+ 1
             with self.graph.as_default():
                 out[i] = self.model.predict(sample)
+                print(self.model.predict(sample))
         return len(out)
 

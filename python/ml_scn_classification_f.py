@@ -67,9 +67,10 @@ class ml_scn_classification_f(gr.sync_block):
         if self.scaled:
             sample = self.scaler.transform(sample)
         detected_scenario = self.model.predict(sample)
-        predict_proba = self.model.predict_proba(sample)
         self.scenario = detected_scenario
+        self.post_message()
+        predict_proba = self.model.predict_proba(sample)
         predict_proba = [i for lis in predict_proba for i in lis]
         out[:] = predict_proba
-        self.post_message()
-        return len(output_items[0])
+        # return len(output_items[0])
+        return 1
