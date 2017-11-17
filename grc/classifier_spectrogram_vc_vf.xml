@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<block>
+  <name>spectrogram_vc_vf</name>
+  <key>classifier_spectrogram_vc_vf</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.spectrogram_vc_vf($nfft, $samp_rate)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>NFFT</name>
+    <key>nfft</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Sample Rate</name>
+    <key>samp_rate</key>
+    <type>float</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>4096</vlen>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>64</vlen>
+  </source>
+
+</block>

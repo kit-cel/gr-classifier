@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<block>
+  <name>dl_class</name>
+  <key>classifier_dl_class</key>
+  <category>[CLASSIFIER]</category>
+  <import>import classifier</import>
+  <make>classifier.dl_class()</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+ <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <vlen>64</vlen>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <vlen>10</vlen>
+  </source>
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <!--<source>-->
+    <!--<name>out</name>-->
+    <!--<type>[> e.g. int, float, complex, byte, short, xxx_vector, ...<]</type>-->
+  <!--</source>-->
+</block>
