@@ -4,7 +4,7 @@
   <key>classifier_dl_class</key>
   <category>[CLASSIFIER]</category>
   <import>import classifier</import>
-  <make>classifier.dl_class()</make>
+  <make>classifier.dl_class($modelfile)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -15,6 +15,13 @@
        * type
        * vlen
        * optional (set to 1 for optional inputs) -->
+  <param>
+  	<name>Model file</name>
+  	<key>modelfile</key>
+  	<value></value>
+  	<type>file_open</type>
+  </param>
+
   <sink>
     <name>in</name>
     <type>float</type>
@@ -26,13 +33,4 @@
     <type>float</type>
     <vlen>10</vlen>
   </source>
-  <!-- Make one 'source' node per output. Sub-nodes:
-       * name (an identifier for the GUI)
-       * type
-       * vlen
-       * optional (set to 1 for optional inputs) -->
-  <!--<source>-->
-    <!--<name>out</name>-->
-    <!--<type>[> e.g. int, float, complex, byte, short, xxx_vector, ...<]</type>-->
-  <!--</source>-->
 </block>

@@ -33,13 +33,13 @@ class dl_class(gr.basic_block):
     """
     docstring for block dl_class
     """
-    def __init__(self):
+    def __init__(self, modelfile):
         gr.basic_block.__init__(self,
             name="dl_class",
             in_sig=[(np.float32, 64)],
             out_sig=[(np.float32, 10)]
             )
-        self.model = load_model('/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/checkpoint/adamax_ckpt.h5')
+        self.model = load_model(modelfile)
 
         # predict function and graph workaround taken from
         # https://github.com/fchollet/keras/issues/2397
@@ -78,6 +78,6 @@ class dl_class(gr.basic_block):
         sample = np.expand_dims(sample, axis=0)
         with self.graph.as_default():
             out[:] = self.model.predict(sample)
-            print(np.argmax(self.model.predict(sample)))
+            # print(np.argmax(self.model.predict(sample)))
         self.consume(0, len(input_items[0]))
         return len(output_items[0])
