@@ -23,7 +23,7 @@ import numpy as np
 from gnuradio import gr
 from scipy import signal
 from scipy import fftpack
-from scipy.misc import toimage
+from scipy.misc import toimage, imsave
 
 import tensorflow as tf
 from keras.models import load_model
@@ -39,37 +39,45 @@ class dl_class(gr.basic_block):
             in_sig=[(np.float32, 64)],
             out_sig=[(np.float32, 10)]
             )
-        self.model = load_model('/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/sgd_model_checkpoint.h5')
+        self.model = load_model('/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/checkpoint/adamax_ckpt.h5')
+
+        # predict function and graph workaround taken from
+        # https://github.com/fchollet/keras/issues/2397
+        # Used in the general_work function
         self.model._make_predict_function()
         self.graph = tf.get_default_graph()
 
+        # [Debug variable] - Uncomment for saving images to disk
+        # self.count = 0
+
     def forecast(self, noutput_items, ninput_items_required):
         #setup size of input_items[i] for work call
+        # We need 64 stacked items for 64x64 images
         for i in range(len(ninput_items_required)):
             ninput_items_required[i] = 64*noutput_items
 
     def general_work(self, input_items, output_items):
         out = output_items[0]
-        #output_items[0][:] = input_items[0]
-        #self.consume_each(len(input_items[0]))
         for i in range(64):
             if i == 0:
                 stacked = np.array(input_items[0][i])
             else:
                 stacked = np.vstack([stacked, input_items[0][i]])
-        # The model requires dimensions (1, 64, 64, 1)
-        # stacked = np.expand_dims(stacked, axis=2)
-        # print(stacked)
-        image = toimage(stacked, channel_axis=2)
-        # image = array_to_img(stacked, scale=False)
 
+        # [Debug statements] - Uncomment to save image to disk
+        # imsave("~/test/test_image_{}.jpg".format(self.count), stacked)
+        # self.count += 1
+
+        # Generate a image object from the received samples
+        image = toimage(stacked, channel_axis=2)
+
+        # Now pass it as an array for image classification
         sample = img_to_array(image)
-        # print(sample)
+
+        # The model requires dimensions (1, 64, 64, 1)
         sample = np.expand_dims(sample, axis=0)
-        # print(sample.shape)
         with self.graph.as_default():
             out[:] = self.model.predict(sample)
             print(np.argmax(self.model.predict(sample)))
-
         self.consume(0, len(input_items[0]))
         return len(output_items[0])
