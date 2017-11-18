@@ -93,7 +93,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -182,7 +182,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -209,7 +209,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -236,7 +236,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -317,7 +317,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -344,7 +344,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -371,7 +371,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -414,7 +414,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>taps</key>
@@ -481,7 +481,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -543,11 +543,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 564)</value>
+      <value>(344, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -590,7 +590,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/cuervo/thesis/data/final_pu/with_dc/scn_2_snr_15.dat</value>
+      <value>/home/cuervo/thesis/data/final_pu/no_dc/scn_9_snr_0.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -645,7 +645,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1296, 920)</value>
+      <value>(1320, 824)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -654,57 +654,6 @@
     <param>
       <key>id</key>
       <value>blocks_message_debug_0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_multiply_const_vxx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>[20]*64</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(832, 492)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_multiply_const_vxx_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>64</value>
     </param>
   </block>
   <block>
@@ -723,11 +672,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 460)</value>
+      <value>(536, 564)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -755,7 +704,7 @@
     </param>
     <param>
       <key>n</key>
-      <value>1</value>
+      <value>20</value>
     </param>
   </block>
   <block>
@@ -778,7 +727,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -821,7 +770,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -876,7 +825,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 404)</value>
+      <value>(408, 188)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -900,7 +849,7 @@
     </param>
     <param>
       <key>num_items</key>
-      <value>8192/2 + 64 *0</value>
+      <value>64</value>
     </param>
     <param>
       <key>vlen</key>
@@ -978,11 +927,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 1092)</value>
+      <value>(1168, 956)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1029,11 +978,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 1500)</value>
+      <value>(800, 1460)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1080,11 +1029,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(984, 1252)</value>
+      <value>(944, 1228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1135,7 +1084,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 348)</value>
+      <value>(1040, 364)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1144,6 +1093,108 @@
     <param>
       <key>id</key>
       <value>blocks_vector_to_stream_0_2</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_vector_to_stream</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1040, 452)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_vector_to_stream_0_2_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_vector_to_stream</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1040, 540)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_vector_to_stream_0_2_0_0</value>
     </param>
     <param>
       <key>type</key>
@@ -1182,11 +1233,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(712, 368)</value>
+      <value>(800, 364)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1204,9 +1255,13 @@
       <key>minoutbuf</key>
       <value>0</value>
     </param>
+    <param>
+      <key>modelfile</key>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/checkpoint/new_adadelta_model_checkpoint.h5</value>
+    </param>
   </block>
   <block>
-    <key>classifier_dl_scn_classification_c</key>
+    <key>classifier_dl_class</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1221,11 +1276,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 556)</value>
+      <value>(800, 452)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1233,7 +1288,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>classifier_dl_scn_classification_c_0</value>
+      <value>classifier_dl_class_0_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1244,12 +1299,51 @@
       <value>0</value>
     </param>
     <param>
-      <key>nfft</key>
-      <value>64</value>
+      <key>modelfile</key>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/checkpoint/adamax_ckpt.h5</value>
+    </param>
+  </block>
+  <block>
+    <key>classifier_dl_class</key>
+    <param>
+      <key>alias</key>
+      <value></value>
     </param>
     <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(800, 540)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>classifier_dl_class_0_0_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>modelfile</key>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/keras/checkpoint/sgd_model_checkpoint.h5</value>
     </param>
   </block>
   <block>
@@ -1272,7 +1366,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1319,7 +1413,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>frame_len</key>
@@ -1374,7 +1468,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1425,7 +1519,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1449,7 +1543,7 @@
     </param>
     <param>
       <key>modelfile</key>
-      <value>/home/cuervo/thesis/cognitive_radio_ml/weights/dtc_full_data_set_depth_50.pkl</value>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/sklearn/joblib/dtc_full_data_set_depth_50.pkl</value>
     </param>
     <param>
       <key>scaled</key>
@@ -1476,7 +1570,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1500,7 +1594,7 @@
     </param>
     <param>
       <key>modelfile</key>
-      <value>/home/cuervo/thesis/cognitive_radio_ml/weights/knn_full_data_set_4_neighbors.pkl</value>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/sklearn/joblib/knn_full_data_set_4_neighbors.pkl</value>
     </param>
     <param>
       <key>scaled</key>
@@ -1527,7 +1621,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1551,7 +1645,7 @@
     </param>
     <param>
       <key>modelfile</key>
-      <value>/home/cuervo/thesis/cognitive_radio_ml/weights/svc_full_data_set_rbf_1e6.pkl</value>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/sklearn/joblib/svc_full_data_set_rbf_1e6.pkl</value>
     </param>
     <param>
       <key>scaled</key>
@@ -1559,11 +1653,11 @@
     </param>
     <param>
       <key>scalerfile</key>
-      <value>/home/cuervo/thesis/cognitive_radio_ml/weights/scaler_saved.pkl</value>
+      <value>/home/cuervo/thesis/cognitive_radio_ml/trained_models/sklearn/joblib/scaler_saved.pkl</value>
     </param>
   </block>
   <block>
-    <key>classifier_spectrogram_vc_vf</key>
+    <key>classifier_np_average_vf_vf</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1582,7 +1676,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 204)</value>
+      <value>(432, 424)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1590,7 +1684,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>classifier_spectrogram_vc_vf_0</value>
+      <value>classifier_np_average_vf_vf_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1599,14 +1693,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>nfft</key>
-      <value>64</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
     </param>
   </block>
   <block>
@@ -1625,70 +1711,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>fft_size</key>
-      <value>64</value>
-    </param>
-    <param>
-      <key>forward</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(200, 504)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>ffg</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>nthreads</key>
       <value>1</value>
-    </param>
-    <param>
-      <key>shift</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>window</key>
-      <value>window.rectangular(64)</value>
-    </param>
-  </block>
-  <block>
-    <key>fft_vxx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
     </param>
     <param>
       <key>fft_size</key>
@@ -1733,6 +1756,69 @@
     <param>
       <key>window</key>
       <value>window.blackmanharris(nfft)</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>64</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(120, 552)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nthreads</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>window.blackmanharris(64)</value>
     </param>
   </block>
   <block>
@@ -1786,15 +1872,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1272, 1056)</value>
+      <value>(1352, 936)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>1, 0, 1, 1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1993,15 +2079,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1256, 1240)</value>
+      <value>(1120, 1208)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>1, 1, 1, 1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2200,15 +2286,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 1480)</value>
+      <value>(992, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>1, 2, 1, 1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2411,11 +2497,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 384)</value>
+      <value>(1216, 344)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>0, 0, 1, 1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2563,7 +2649,421 @@
     </param>
     <param>
       <key>name</key>
-      <value>"Adadada"</value>
+      <value>Adadelta</value>
+    </param>
+    <param>
+      <key>ncols</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>nrows</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>update_time</key>
+      <value>0.10</value>
+    </param>
+  </block>
+  <block>
+    <key>qtgui_time_raster_sink_x</key>
+    <param>
+      <key>axislabels</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1216, 432)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>0, 1, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>grid</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>qtgui_time_raster_sink_x_0_1_0</value>
+    </param>
+    <param>
+      <key>zmax</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>zmin</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>alpha1</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color1</key>
+      <value>5</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha10</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha2</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha3</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha4</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha5</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha6</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha7</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha8</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha9</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>mult</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>"Adamax"</value>
+    </param>
+    <param>
+      <key>ncols</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>nrows</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>update_time</key>
+      <value>0.10</value>
+    </param>
+  </block>
+  <block>
+    <key>qtgui_time_raster_sink_x</key>
+    <param>
+      <key>axislabels</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1216, 520)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>0, 2, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>grid</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>qtgui_time_raster_sink_x_0_1_0_0</value>
+    </param>
+    <param>
+      <key>zmax</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>zmin</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>alpha1</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color1</key>
+      <value>5</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha10</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha2</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha3</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha4</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha5</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha6</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha7</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha8</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alpha9</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>color9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>label9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>mult</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>"SGD"</value>
     </param>
     <param>
       <key>ncols</key>
@@ -2773,7 +3273,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2800,7 +3300,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2827,7 +3327,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2854,11 +3354,11 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1192, 276)</value>
+      <value>(1224, 276)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2881,7 +3381,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2908,7 +3408,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2935,7 +3435,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2962,7 +3462,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2994,14 +3494,8 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
-    <sink_block_id>classifier_dl_class_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_nlog10_ff_0</source_block_id>
-    <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
+    <sink_block_id>classifier_np_average_vf_vf_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3013,19 +3507,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
   </connection>
   <connection>
     <source_block_id>blocks_stream_to_vector_1</source_block_id>
-    <sink_block_id>classifier_dl_scn_classification_c_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_stream_to_vector_1</source_block_id>
-    <sink_block_id>classifier_spectrogram_vc_vf_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_stream_to_vector_1</source_block_id>
-    <sink_block_id>ffg</sink_block_id>
+    <sink_block_id>fft_vxx_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3066,14 +3548,32 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_vector_to_stream_0_2_0</source_block_id>
+    <sink_block_id>qtgui_time_raster_sink_x_0_1_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_vector_to_stream_0_2_0_0</source_block_id>
+    <sink_block_id>qtgui_time_raster_sink_x_0_1_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>classifier_dl_class_0</source_block_id>
     <sink_block_id>blocks_vector_to_stream_0_2</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>classifier_dl_scn_classification_c_0</source_block_id>
-    <sink_block_id>blocks_vector_to_stream_0_2</sink_block_id>
+    <source_block_id>classifier_dl_class_0_0</source_block_id>
+    <sink_block_id>blocks_vector_to_stream_0_2_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>classifier_dl_class_0_0_0</source_block_id>
+    <sink_block_id>blocks_vector_to_stream_0_2_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3294,20 +3794,32 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>classifier_spectrogram_vc_vf_0</source_block_id>
+    <source_block_id>classifier_np_average_vf_vf_0</source_block_id>
     <sink_block_id>classifier_dl_class_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>ffg</source_block_id>
-    <sink_block_id>blocks_complex_to_mag_squared_0</sink_block_id>
+    <source_block_id>classifier_np_average_vf_vf_0</source_block_id>
+    <sink_block_id>classifier_dl_class_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>classifier_np_average_vf_vf_0</source_block_id>
+    <sink_block_id>classifier_dl_class_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>fft_vxx_0</source_block_id>
     <sink_block_id>classifier_energy_detection_vcf_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_1</source_block_id>
+    <sink_block_id>blocks_complex_to_mag_squared_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3321,18 +3833,18 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
     <source_block_id>virtual_source_2</source_block_id>
     <sink_block_id>classifier_frame_detection_f_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>3</sink_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>virtual_source_3</source_block_id>
     <sink_block_id>classifier_frame_detection_f_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>1</sink_key>
+    <sink_key>2</sink_key>
   </connection>
   <connection>
     <source_block_id>virtual_source_4</source_block_id>
     <sink_block_id>classifier_frame_detection_f_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>2</sink_key>
+    <sink_key>3</sink_key>
   </connection>
 </flow_graph>
