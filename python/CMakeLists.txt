@@ -33,7 +33,6 @@ GR_PYTHON_INSTALL(
     __init__.py
     ml_scn_classification_f.py
     dl_class.py
-    spectrogram_vc_vf.py
     np_average_vf_vf.py DESTINATION ${GR_PYTHON_DIR}/classifier
 )
 
@@ -51,5 +50,4 @@ GR_ADD_TEST(qa_burst_tagger_cc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/
 GR_ADD_TEST(qa_energy_detection_vcf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_energy_detection_vcf.py)
 GR_ADD_TEST(qa_ml_scn_classification_f ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ml_scn_classification_f.py)
 GR_ADD_TEST(qa_dl_class ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_dl_class.py)
-GR_ADD_TEST(qa_spectrogram_vc_vf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_spectrogram_vc_vf.py)
 GR_ADD_TEST(qa_np_average_vf_vf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_np_average_vf_vf.py)
