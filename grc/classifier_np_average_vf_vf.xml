@@ -2,7 +2,7 @@
 <block>
   <name>np_average_vf_vf</name>
   <key>classifier_np_average_vf_vf</key>
-  <category>[classifier]</category>
+  <category>[CLASSIFIER]</category>
   <import>import classifier</import>
   <make>classifier.np_average_vf_vf()</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
