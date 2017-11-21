@@ -26,5 +26,6 @@ install(FILES
     classifier_packet_sink.xml
     classifier_ml_scn_classification_f.xml
     classifier_dl_class.xml
-    classifier_np_average_vf_vf.xml DESTINATION share/gnuradio/grc/blocks
+    classifier_np_average_vf_vf.xml
+    classifier_vector_average_vcvc.xml DESTINATION share/gnuradio/grc/blocks
 )

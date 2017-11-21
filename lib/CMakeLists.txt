@@ -33,6 +33,7 @@ list(APPEND classifier_sources
     energy_detection_vcf_impl.cc
     packet_sink_impl.cc
     packet_source_impl.cc
+    vector_average_vcvc_impl.cc
 )
 
 set(classifier_sources "${classifier_sources}" PARENT_SCOPE)

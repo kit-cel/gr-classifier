@@ -15,6 +15,7 @@
 #include "classifier/energy_detection_vcf.h"
 #include "classifier/packet_source.h"
 #include "classifier/packet_sink.h"
+#include "classifier/vector_average_vcvc.h"
 %}
 
 
@@ -32,3 +33,5 @@ GR_SWIG_BLOCK_MAGIC2(classifier, energy_detection_vcf);
 GR_SWIG_BLOCK_MAGIC2(classifier, packet_source);
 %include "classifier/packet_sink.h"
 GR_SWIG_BLOCK_MAGIC2(classifier, packet_sink);
+%include "classifier/vector_average_vcvc.h"
+GR_SWIG_BLOCK_MAGIC2(classifier, vector_average_vcvc);

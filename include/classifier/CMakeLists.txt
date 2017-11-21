@@ -28,5 +28,6 @@ install(FILES
     burst_tagger_cc.h
     energy_detection_vcf.h
     packet_sink.h
-    packet_source.h DESTINATION include/classifier
+    packet_source.h
+    vector_average_vcvc.h DESTINATION include/classifier
 )

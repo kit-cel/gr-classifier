@@ -51,3 +51,4 @@ GR_ADD_TEST(qa_energy_detection_vcf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_
 GR_ADD_TEST(qa_ml_scn_classification_f ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ml_scn_classification_f.py)
 GR_ADD_TEST(qa_dl_class ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_dl_class.py)
 GR_ADD_TEST(qa_np_average_vf_vf ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_np_average_vf_vf.py)
+GR_ADD_TEST(qa_vector_average_vcvc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_vector_average_vcvc.py)
