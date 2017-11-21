@@ -37,7 +37,7 @@ class dl_class(gr.basic_block):
         gr.basic_block.__init__(self,
             name="dl_class",
             in_sig=[(np.float32, 64)],
-            out_sig=[(np.float32, 10)]
+            out_sig=[(np.float32, 10)] * 2
             )
         self.model = load_model(modelfile)
 
@@ -48,7 +48,7 @@ class dl_class(gr.basic_block):
         self.graph = tf.get_default_graph()
 
         # [Debug variable] - Uncomment for saving images to disk
-        # self.count = 0
+        self.count = 100
 
     def forecast(self, noutput_items, ninput_items_required):
         #setup size of input_items[i] for work call
@@ -57,7 +57,10 @@ class dl_class(gr.basic_block):
             ninput_items_required[i] = 64*noutput_items
 
     def general_work(self, input_items, output_items):
-        out = output_items[0]
+        pred_prob = output_items[0]
+        scn = output_items[1]
+        # scn = np.zeros(10, dtype=np.float32)
+        # scn = np.ones(10, dtype=np.float32)
         for i in range(64):
             if i == 0:
                 stacked = np.array(input_items[0][i])
@@ -65,8 +68,8 @@ class dl_class(gr.basic_block):
                 stacked = np.vstack([stacked, input_items[0][i]])
 
         # [Debug statements] - Uncomment to save image to disk
-        # imsave("~/test/test_image_{}.jpg".format(self.count), stacked)
-        # self.count += 1
+        imsave("/home/cuervo/test/test_image_{}.jpg".format(self.count), stacked)
+        self.count += 1
 
         # Generate a image object from the received samples
         image = toimage(stacked, channel_axis=2)
@@ -77,7 +80,8 @@ class dl_class(gr.basic_block):
         # The model requires dimensions (1, 64, 64, 1)
         sample = np.expand_dims(sample, axis=0)
         with self.graph.as_default():
-            out[:] = self.model.predict(sample)
-            # print(np.argmax(self.model.predict(sample)))
+            pred_prob[:] = self.model.predict(sample)
+            scn[:] = (np.arange(10) == np.argmax(self.model.predict(sample))).astype(float)
+            # a = (np.arange(10) == 4).astype(float)
         self.consume(0, len(input_items[0]))
         return len(output_items[0])

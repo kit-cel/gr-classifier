@@ -21,7 +21,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
             self,
             name='Scenario classification',   # will show up in GRC
             in_sig=[np.float32]*6,
-            out_sig=None
+            out_sig=[(np.float32, 10)]
         )
         # if an attribute with the same name as a parameter is found,
         # a callback is registered (properties work, too).
@@ -96,14 +96,17 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
         self.message_port_pub(pmt.intern("scenario"), msg_dict)
 
     def work(self, input_items, output_items):
+	scn = output_items[0]
         inter_frame_times = np.array([input_items[i][0] for i in range(self.nchan)])  # current inter frame arrival time per channel
         packet_rate = input_items[4][0]  # not used at the moment
         inter_frame_time_variance = input_items[5][0]  # variance of the inter frame arrival time (averaged over all channels)
         detected_scenario, chan_occupied = self.run_decision_tree(inter_frame_times, inter_frame_time_variance)
+	scn[:] = (np.arange(10) == detected_scenario).astype(float)
         if detected_scenario != self.scenario or chan_occupied != self.chan_occupied:
             self.confidence -= 1
             if self.confidence < 0:
                 self.scenario = detected_scenario
+		
                 self.chan_occupied = chan_occupied
                 self.confidence = 0
                 self.post_message()

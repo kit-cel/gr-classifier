@@ -38,6 +38,7 @@ class np_average_vf_vf(gr.basic_block):
             ninput_items_required[i] = 120 * noutput_items
 
     def general_work(self, input_items, output_items):
-        output_items[0][:] = np.average(input_items[0][:120].T, axis=1)
+        # output_items[0][:] = np.average(input_items[0][:120].T, axis=1)
+        output_items[0][:] = np.mean(input_items[0][:120].T, axis=1)
         self.consume_each(len(input_items[0]))
         return len(output_items[0])

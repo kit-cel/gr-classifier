@@ -69,4 +69,9 @@
     <vlen>10</vlen>
   </source>
 
+  <source>
+    <name>scn</name>
+    <type>float</type>
+    <vlen>10</vlen>
+  </source>
 </block>

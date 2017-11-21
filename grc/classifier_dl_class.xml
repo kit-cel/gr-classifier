@@ -29,7 +29,13 @@
   </sink>
 
   <source>
-    <name>out</name>
+    <name>pred_prob</name>
+    <type>float</type>
+    <vlen>10</vlen>
+  </source>
+
+  <source>
+    <name>scn</name>
     <type>float</type>
     <vlen>10</vlen>
   </source>

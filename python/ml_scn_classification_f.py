@@ -32,7 +32,7 @@ class ml_scn_classification_f(gr.sync_block):
         gr.sync_block.__init__(self,
                                name="ml scn classification",
                                in_sig=[np.float32]*6,
-                               out_sig=[(np.float32, 10)]
+                               out_sig=[(np.float32, 10)]*2
                               )
         self.scenario = 10 # Irreal scenario number just as initialization value
         self.message_port_register_out(pmt.intern("scenario"))
@@ -61,7 +61,8 @@ class ml_scn_classification_f(gr.sync_block):
         """
         # Increase of dimension for the sample is important
         # see https://stackoverflow.com/questions/35082140/preprocessing-in-scikit-learn-single-sample-depreciation-warning
-        out = output_items[0]
+        predic_prob = output_items[0]
+        scn = output_items[1]
         sample = np.array([[input_items[i][0] for i in range(6)]])
 
         if self.scaled:
@@ -71,6 +72,7 @@ class ml_scn_classification_f(gr.sync_block):
         self.post_message()
         predict_proba = self.model.predict_proba(sample)
         predict_proba = [i for lis in predict_proba for i in lis]
-        out[:] = predict_proba
+        predic_prob[:] = predict_proba
+        scn[:] = (np.arange(10) == self.model.predict(sample)).astype(float)
         # return len(output_items[0])
         return 1
